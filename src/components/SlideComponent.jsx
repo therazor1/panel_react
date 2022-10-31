@@ -16,17 +16,16 @@ const SlideComponent = ({user, estado}) => {
                 data
               ])
             });
-            // setPendientes({
-            //   id : user.uid,
+            // setPendientes([
+            //   ...pendientes,
             //   infoPendiente
-            // })
+            // ])
           } catch (error) {
             console.log(error)
           }
         }
         obtenerAllPendiente()
     }, [])
-    console.log(infoPendiente)
     return (
       <SplideSlide>
         <div className="card">
@@ -48,13 +47,13 @@ const SlideComponent = ({user, estado}) => {
             </ul>
             <ul className="pendiente">
               {
-                  // pendientes.map(pendiente => (
-                  //   <PendienteTask 
-                  //     key={pendiente}
-                  //     pendienteObtener={pendiente}
-                  //     estado={estado}
-                  //   />
-                  // ))
+                  infoPendiente.map(pendiente => (
+                    <PendienteTask 
+                      key={pendiente._id}
+                      pendienteObtener={pendiente}
+                      estado={estado}
+                    />
+                  ))
               }
               
             </ul>
