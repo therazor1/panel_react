@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24">
+  <g id="icon-menu-02a" transform="translate(-24 -182.529)">
+    <g id="Rectángulo_51" data-name="Rectángulo 51" transform="translate(34 182.529)" fill="none" stroke="#b8b8b8" stroke-width="1.5">
+      <rect width="13" height="11" rx="2" stroke="none"/>
+      <rect x="0.75" y="0.75" width="11.5" height="9.5" rx="1.25" fill="none"/>
+    </g>
+    <g id="Rectángulo_53" data-name="Rectángulo 53" transform="translate(37 206.529) rotate(180)" fill="none" stroke="#b8b8b8" stroke-width="1.5">
+      <rect width="13" height="11" rx="2" stroke="none"/>
+      <rect x="0.75" y="0.75" width="11.5" height="9.5" rx="1.25" fill="none"/>
+    </g>
+    <g id="Rectángulo_52" data-name="Rectángulo 52" transform="translate(24 182.529)" fill="none" stroke="#b8b8b8" stroke-width="1.5">
+      <rect width="8" height="11" rx="2" stroke="none"/>
+      <rect x="0.75" y="0.75" width="6.5" height="9.5" rx="1.25" fill="none"/>
+    </g>
+    <g id="Rectángulo_54" data-name="Rectángulo 54" transform="translate(47 206.529) rotate(180)" fill="none" stroke="#b8b8b8" stroke-width="1.5">
+      <rect width="8" height="11" rx="2" stroke="none"/>
+      <rect x="0.75" y="0.75" width="6.5" height="9.5" rx="1.25" fill="none"/>
+    </g>
+  </g>
+</svg>
