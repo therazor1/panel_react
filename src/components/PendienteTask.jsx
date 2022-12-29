@@ -3,9 +3,11 @@ import { useState, useEffect } from 'react'
 import clienteAxios from '../config/clienteAxios'
 import { obtenerImagen } from '../helpers/ObtenerImagen'
 import useTask from '../hooks/useTask'
-const PendienteTask = ({pendienteObtener, estado}) => {
+import useUsers from '../hooks/useUsers'
+const PendienteTask = ({pendiente}) => {
+
+    const {setCambioStado, cambioStado} = useUsers()
     const {setEditPendiente, setModal} = useTask()
-    console.log(pendienteObtener.estado)
     const [getPendiente, setgetPendiente] = useState({})
     const [cargando, setCargando] = useState(false)
     const [idCreador, setIdCreador] = useState("")
@@ -26,7 +28,8 @@ const PendienteTask = ({pendienteObtener, estado}) => {
         setCargando(true)
         const obtenerPendiente = async () => {
             try {
-                const {data} = await clienteAxios.post(`/pendientes/${pendienteObtener}`, estado)
+                const {data} = await clienteAxios.post(`/pendientes/${pendiente}`)
+                // console.log(data)
                 setIdCreador(data.creador._id)
                 setNombreCreador(data.creador.nombre)
                 setCreadorColor(data.creador.color)
@@ -48,7 +51,7 @@ const PendienteTask = ({pendienteObtener, estado}) => {
         }
         obtenerPendiente()
         setCargando(false)
-    }, [])
+    }, [cambioStado ?? true])
 
     const editarPendiente = () => {
         setModal(true)
@@ -70,18 +73,20 @@ const PendienteTask = ({pendienteObtener, estado}) => {
         {
             cargando ? <div className="loader"></div> : (
                 <a className="edit solicitudno" onClick={()=>editarPendiente()} >
-                    <div style={{backgroundColor : pendienteObtener.creador.color}} className="color" title={pendienteObtener.creador.nombre}></div>
+                    <div style={{backgroundColor : creadorColor}} className="color" title={nombreCreador}></div>
                     <li className="task">
-                        <div className="creator creator-30" style={{display:"none"}}></div>
-                        <div className="cliente" title={pendienteObtener.cliente.nombre}>
-                            <img src={urlImg} className={pendienteObtener.cliente.nombre}/>
+                        <div className="creator" style={{display:"none"}}></div>
+                        <div className="cliente" title={nombreCliente}>
+                            <img src={urlImg} className={nombreCliente}/>
                         </div>
-                        <div className="tarea"><p>{pendienteObtener.tarea}</p></div><div className="tiempo"><p>{pendienteObtener.hora}</p></div><div className="fechas"><p>{pendienteObtener.fecha}</p></div>
-                        <div className="dot off"></div>
+                        <div className="tarea"><p>{tarea}</p></div>
+                        <div className="tiempo"><p>{hora}</p></div>
+                        <div className="fechas"><p>{fecha}</p></div>
+                        <div className={`dot ${prioridad ? 'on' : 'off'}`}></div>
                         <div className="estado">
-                            <select><option value={pendienteObtener.estado._id}>{pendienteObtener.estado.nombre}</option></select>
+                            <select><option value={idEstado}>{nombreEstado}</option></select>
                         </div>
-                    </li>   
+                    </li>
                 </a>
             )
         }

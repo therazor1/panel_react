@@ -3,11 +3,12 @@ import { useEffect } from "react";
 import { createContext } from "react";
 import Swal from "sweetalert2";
 import clienteAxios from "../config/clienteAxios";
+import useUsers from "../hooks/useUsers";
 
 const TaskContext = createContext()
 
 const TaskProvider = ({children}) => {
-
+    const {setCambioStado} = useUsers()
     const [pendienteUser, setPendienteUser] = useState([])
 
     const [modal, setModal] = useState(false)
@@ -26,6 +27,7 @@ const TaskProvider = ({children}) => {
     const pendienteSend = async(pendiente) => {
         if(pendiente.id){
             await editarPendiente(pendiente)
+            setCambioStado(true)
         }else{
             // Agregando
             await agregarPendiente(pendiente)

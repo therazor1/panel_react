@@ -1,11 +1,13 @@
 import React from 'react'
+import { useState } from 'react'
 import Carousel from '../components/Carousel'
+import Listado from '../components/Listado'
 import useTask from '../hooks/useTask'
 import useUsers from '../hooks/useUsers'
 const Inicio = () => {
     // console.log(miembros)
     const {cargando} = useTask()
-    const {miembros} = useUsers()
+    const {justId} = useUsers()
     return (
         <>
             {
@@ -16,22 +18,21 @@ const Inicio = () => {
                 ) : (
                     <section className="contenido">
                         <div className="contenedor">
-                            <Carousel
-                                boton={true}
-                                estado={["632476dee7580e1d74a840f5", "632476fee7580e1d74a840f7" ]}
-                                titulo="Pendientes del equipo"
-                                miembros={miembros}
-                            />
-                            {/* <Carousel 
-                                boton={false}
-                                estado={["63247710e7580e1d74a840f9"]}
-                                titulo="Revisión Invitro"
-                            />
-                            <Carousel 
-                                boton={false}
-                                estado={["63247722e7580e1d74a840fb"]}
-                                titulo="Próximos"
-                            /> */}
+
+                        <Carousel
+                            boton={true}
+                            estado="pendiente"
+                            titulo="Pendientes del equipo"
+                            miembros={justId}
+                        />
+                        <Carousel 
+                            boton={false}
+                            titulo="Revisión Invitro"
+                            estado="completo"
+                            miembros={justId}
+                        />
+     
+                            
                         </div>
                     </section>  
                 )

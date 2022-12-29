@@ -14,9 +14,11 @@ import '@splidejs/react-splide/css/sea-green';
 
 // or only core styles
 import '@splidejs/react-splide/css/core';
+import SlideComponent2 from './SlideComponent2';
+import SlideComponentNull from './SlideComponentNull';
 
 const Carousel = ({boton, estado, titulo, miembros}) => {
-
+    const {cambioStado} = useUsers()
     return (
         <Splide 
             hasTrack={ false } 
@@ -35,15 +37,18 @@ const Carousel = ({boton, estado, titulo, miembros}) => {
                     </div>
                 </div>
                 <SplideTrack>
-                    {
-                        miembros.map((user, index) => (
-                            <SlideComponent 
-                                key={user.uid}
-                                user={user}
-                                index={index}
-                                estado={estado}
-                            />
-                        ))
+                    {   
+                        cambioStado ? (
+                            <SlideComponentNull />
+                        ): (
+                            miembros.map((user, index) => (
+                                <SlideComponent 
+                                    key={user.uid}
+                                    user={user}
+                                    estado={estado}
+                                />
+                            ))
+                        )
                     }
                 </SplideTrack>
             </section>

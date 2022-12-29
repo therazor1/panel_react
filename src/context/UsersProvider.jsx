@@ -10,7 +10,24 @@ const UsersProvider = ({children}) => {
     const [updateUser, setUpdateUser] = useState({})
     const [mensaje, setMensaje] = useState({})
     const [modal, setModal] = useState(false)
+    const [cargando, setCargando] = useState(true)
+
     const navigate = useNavigate()
+
+    const [justId, setJustId] = useState([])
+
+    const [cambioStado, setCambioStado] = useState(true)
+
+    useEffect(() => {
+      const getUsersId = async()=> {
+        const {data} = await clienteAxios.get('/users/justId')
+        setJustId(data)
+        setCambioStado(false)
+      }
+      getUsersId()
+    }, [cambioStado ?? true])
+    
+
     const addUser = async(user) => {
         if(user.uid){
             editarUsuario(user)
@@ -119,11 +136,18 @@ const UsersProvider = ({children}) => {
             // setAuth(data.usuario)
         } catch (error) {
             setAuth({})
+        }finally{
+            setCargando(false)
         }
       }
       getUsers()
     }, [])
 
+
+
+   
+    
+    
 
     return (
         <UsersContext.Provider
@@ -137,7 +161,12 @@ const UsersProvider = ({children}) => {
                 setMensaje,
                 setModal,
                 modal,
-                deleteUser
+                deleteUser,
+                justId,
+                cargando,
+                setJustId,
+                setCambioStado,
+                cambioStado
             }}
         >
             {children}
