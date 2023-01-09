@@ -1,13 +1,34 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Carousel from '../components/Carousel'
-import Listado from '../components/Listado'
 import useTask from '../hooks/useTask'
 import useUsers from '../hooks/useUsers'
+
+import io from "socket.io-client"
+import usePanel from '../hooks/usePanel'
+import useAuth from '../hooks/useAuth'
+const socket = io('http://localhost:8080')
+
+
 const Inicio = () => {
     // console.log(miembros)
     const {cargando} = useTask()
-    const {justId} = useUsers()
+    const {justId, setCambioStado} = useUsers()
+    const {setBoolAgregado} = usePanel()
+    const {auth} = useAuth()
+    
+
+    useEffect(()=>{
+        socket.on('mensaje', mensaje => {
+            setCambioStado(true)
+            if(auth.id == mensaje){
+                setBoolAgregado(true)
+            }
+        })
+        return () => {
+            socket.off('mensaje', mensaje => console.log(mensaje))
+        }
+    }, [])
     return (
         <>
             {
@@ -17,22 +38,11 @@ const Inicio = () => {
                     </div>
                 ) : (
                     <section className="contenido">
-                        <div className="contenedor">
-
+                        <div className="contenedor contenido_main">
                         <Carousel
                             boton={true}
-                            estado="pendiente"
-                            titulo="Pendientes del equipo"
                             miembros={justId}
                         />
-                        <Carousel 
-                            boton={false}
-                            titulo="Revisión Invitro"
-                            estado="completo"
-                            miembros={justId}
-                        />
-     
-                            
                         </div>
                     </section>  
                 )

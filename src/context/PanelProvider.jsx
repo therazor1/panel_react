@@ -7,29 +7,9 @@ const PanelContext = createContext()
 
 const PanelProvider = ({children}) => {
 
-    const [tareas, setTareas] = useState("")
-
-
-
-    useEffect(() => {
-        const obteneTareas = async() => {
-            try {
-                const token = localStorage.getItem("token")
-                const config = {
-                    headers:{
-                        "Content-Type" : "application/json",
-                        Authorization : `Bearer ${token}`
-                    }
-                }
-                const {data} = await clienteAxios("/panel", config)
-                setTareas(data)
-            } catch (error) {
-                console.log(error)
-            }
-        }
-        obteneTareas()
-    }, [])
-    
+    const [tareas, setTareas] = useState([])
+    const [taskAtrasados, setTaskAtrasados] = useState("")
+    const [boolAgregado, setBoolAgregado] = useState(true)
     const editarPening = async (pendiente) => {
         const {id, valor} = pendiente
         try {
@@ -47,8 +27,13 @@ const PanelProvider = ({children}) => {
     return (
         <PanelContext.Provider
             value={{
+                editarPening,
+                setTareas,
                 tareas,
-                editarPening
+                taskAtrasados,
+                setTaskAtrasados,
+                setBoolAgregado,
+                boolAgregado
             }}
         >
             {children}

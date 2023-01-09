@@ -1,16 +1,54 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import Task from '../components/Task'
-import useAuth from '../hooks/useAuth'
 import usePanel from '../hooks/usePanel'
+import clienteAxios from "../config/clienteAxios";
+import { sumHours } from '../helpers/sumarHoras'
+
+import io from "socket.io-client"
+import Frase from '../components/Frase';
+const socket = io('http://localhost:8080')
+
 
 const Panel = () => {
+    const [cargando, setCargando] = useState(true)
 
-    
-    const {tareas} = usePanel()
+    const {tareas, setTareas, setTaskAtrasados, setBoolAgregado, boolAgregado} = usePanel()
+
+    let date = new Date();
+    let isoDate = date.toISOString();
+    let dateOnly = Date.parse(isoDate.split('T')[0]);
+    useEffect(() => {
+        const obteneTareas = async() => {
+            try {
+                const token = localStorage.getItem("token")
+                const config = {
+                    headers:{
+                        "Content-Type" : "application/json",
+                        Authorization : `Bearer ${token}`
+                    }
+                }
+                const {data} = await clienteAxios("/panel", config)
+                setTareas(data)
+                const atrasados = data.map(task => {
+                    if(Date.parse(task.fecha) < dateOnly){
+                        return task.hora
+                    }
+                })
+                setTaskAtrasados(sumHours(atrasados))
+            } catch (error) {
+                return error
+            } finally{
+                setCargando(false)
+                setBoolAgregado(false)
+            }
+        }
+        obteneTareas()
+    }, [boolAgregado ?? true])
 
 
     return (
-            <>
+            <>  
                 <section className="contenido">
                     <div className="contenedor">
                         <section className="row">
@@ -35,12 +73,14 @@ const Panel = () => {
                                     </ul>
                                     <ul className="tareas-container tareas-container-scroll sortable-tasks contenedores-tareas" data-seccion="Pendientes">
                                         {
-                                            tareas.map(tarea => (
-                                                <Task 
-                                                    key={tarea._id}
-                                                    tarea={tarea}
-                                                />
-                                            ))
+                                            cargando ?  "Cargando" : (
+                                                tareas.map(tarea => (
+                                                    <Task 
+                                                        key={tarea._id}
+                                                        tarea={tarea}
+                                                    />
+                                                ))
+                                            )
                                         }
                                     </ul>
                                 </div>
@@ -90,8 +130,7 @@ const Panel = () => {
                                 </div>
                                 <div className="frase">
                                     <p>Frases del día</p>
-                                    <h2>La mayor declaración de amor es la que no se hace; el hombre que siente mucho, habla poco</h2>
-                                    <span>Platón</span>
+                                    <Frase />
                                 </div>
                             </div>
                         </section>

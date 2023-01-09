@@ -4,7 +4,9 @@ import { createContext } from "react";
 import Swal from "sweetalert2";
 import clienteAxios from "../config/clienteAxios";
 import useUsers from "../hooks/useUsers";
-
+import io from "socket.io-client"
+import useAuth from "../hooks/useAuth";
+const socket = io('http://localhost:8080')
 const TaskContext = createContext()
 
 const TaskProvider = ({children}) => {
@@ -31,13 +33,17 @@ const TaskProvider = ({children}) => {
         }else{
             // Agregando
             await agregarPendiente(pendiente)
+            setCambioStado(true)
         }
     }
     const [agregado, setAgregado] = useState(false)
     const agregarPendiente = async(pendiente) => {
         try {
             const {data} = await clienteAxios.post(`/pendientes/`, pendiente)
+            
+            console.log(data)
             if(data.msg){
+                socket.emit('taskad', pendiente.responsable)
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
@@ -63,6 +69,7 @@ const TaskProvider = ({children}) => {
         try {
             const {data} = await clienteAxios.put(`/pendientes/${pendiente.id}`, resto)
             setAgregado(true)
+            socket.emit('taskad', 'agregado')
         } catch (error) {
             console.log(error)
             Swal.fire({
@@ -76,7 +83,7 @@ const TaskProvider = ({children}) => {
         
     }
 
-    const deletePendiente = async(id) => {
+    const deletePendiente = async(id, responsable, estado) => {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -88,7 +95,7 @@ const TaskProvider = ({children}) => {
         }).then(async(result) => {
         if (result.value) {
             try {
-                const {data} = await clienteAxios.delete(`/pendientes/${id}`)
+                const {data} = await clienteAxios.delete(`/pendientes/${id}/${responsable}/${estado}`)
                 Swal.fire(
                     'Deleted!',
                     'El usuario ha sido eliminado',
@@ -97,6 +104,8 @@ const TaskProvider = ({children}) => {
                 setEditPendiente({})
                 setAgregado(true)
                 setModal(false)
+                setCambioStado(true)
+                socket.emit('taskad', 'agregado')
             } catch (error) {
                 Swal.fire({
                     position: 'center',

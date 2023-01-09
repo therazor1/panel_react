@@ -97,7 +97,7 @@ const ModalPendiente = () => {
                     (estado == "632476dee7580e1d74a840f5" || estado == '632476fee7580e1d74a840f7') && (
                         <a 
                             className="delete"
-                            onClick={()=>deletePendiente(id)}
+                            onClick={()=>deletePendiente(id, responsable, estado)}
                         >
                             <FontAwesomeIcon
                                 icon={faTrashAlt}
@@ -183,7 +183,7 @@ const ModalPendiente = () => {
                             <input 
                                 type="date" 
                                 id='fecha'
-                                value={`${fecha}`}
+                                value={fecha}
                                 onChange={(e)=>setFecha(e.target.value)}
                             />
                         </div>

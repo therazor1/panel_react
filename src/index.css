@@ -12,6 +12,7 @@
   --rojo : #e74c3c;
   --celeste : #3cc;
   --azulHeader : #4e6286;
+  --rosa: #EA2788;
 }
 html{
   box-sizing: border-box;
@@ -1373,6 +1374,7 @@ form div select{
   transition: all .3s ease-in-out;
   padding: 4px;
   font-size: .9rem;
+  min-height: 55px;
 }
 .card-body ul li.task.in{
   background: #486581!important;
@@ -1469,6 +1471,8 @@ div.splide__track{
 div.splide__track ul.splide__list{
   width: 100%;
   padding: 0 0 1.3rem 0!important;
+  display: flex;
+  flex-direction: column;
 }
 .splide{
   padding: 0 !important;
@@ -1527,3 +1531,50 @@ div.splide__track ul.splide__list{
   }
 }
     
+
+.card-header{
+  background-color: #213b55;
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 5px 5px 0 0;
+}
+
+span.date{
+  color: #fff;
+}
+
+.tiempo{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 1.75rem;
+}
+
+.tiempo .date{
+  background-color: var(--celeste);
+  color: var(--azul);
+  font-size: .95rem;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+.tiempo .delay{
+  color: var(--rosa);
+  background-color: var(--blanco);
+  font-size: .95rem;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+
+section.contenido .contenedor section.row ul.splide__list{
+  flex-direction: row !important;
+}
+
+.row_tasks{
+  margin-right: 30px;
+}

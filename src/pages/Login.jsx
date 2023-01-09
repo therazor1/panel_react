@@ -6,11 +6,15 @@ import Swal from "sweetalert2"
 import Mensaje from '../components/Mensaje'
 import clienteAxios from '../config/clienteAxios'
 import useAuth from "../hooks/useAuth"
+import useUsers from '../hooks/useUsers'
 
 const Login = ({setAcce}) => {
     const navigate = useNavigate()
     const [error, setError] = useState(false)
     const [mensaje, setMensaje] = useState("")
+
+    const {setCambioStado} = useUsers()
+
     const [datos, setDatos] = useState({
         correo : "",
         password : ""
@@ -43,6 +47,7 @@ const Login = ({setAcce}) => {
             const {data} = await clienteAxios.post('/auth/login', {correo, password})
             localStorage.setItem("token", data.token)
             setAuth(data)
+            setCambioStado(true)
             navigate("/")
         } catch (error) {
             if(!error.response.data.code){

@@ -7,10 +7,10 @@ import useUsers from "../hooks/useUsers";
 const SlideComponent = ({user, estado = ""}) => {
     const {setCambioStado, cambioStado} = useUsers()
     const [pendientes, setPendientes] = useState(Array(user)[0][estado] ? Array(user)[0][estado] : [])  
+    // console.log(user)
     const [infoPendiente, setInfoPendiente] = useState([])
     const [infoUser, setInfoUser] = useState({})
     const [cargando, setCargando] = useState(true)
-
     useEffect(() => {
         const infoUsuario = async() => {
             try {
@@ -37,6 +37,7 @@ const SlideComponent = ({user, estado = ""}) => {
                     <img src="" alt="" />
                     <p className="name">{infoUser.nombre}</p>
                   </div>
+                  <span className="date">Hoy</span>
                 </div>
                 <div className="card-body">
                   <ul>

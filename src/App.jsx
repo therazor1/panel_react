@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import Clientes from './pages/Clientes'
@@ -15,8 +15,10 @@ import Cerrar from './pages/Cerrar'
 import { TaskProvider } from './context/TaskProvider'
 import { PanelProvider } from './context/PanelProvider'
 
+
+
 const App = () => {
-  const [acce, setAcce] = useState(false)
+
 
   return (
     <BrowserRouter>

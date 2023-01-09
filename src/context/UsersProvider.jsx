@@ -2,6 +2,7 @@ import { useState, useEffect, createContext } from "react";
 import clienteAxios from "../config/clienteAxios";
 import { useNavigate } from 'react-router-dom'
 import Swal from "sweetalert2";
+import useAuth from "../hooks/useAuth";
 
 const UsersContext = createContext()
 
@@ -12,6 +13,10 @@ const UsersProvider = ({children}) => {
     const [modal, setModal] = useState(false)
     const [cargando, setCargando] = useState(true)
 
+    const {auth} = useAuth()
+
+    const [modalPerfil, setModalPerfil] = useState(false)
+
     const navigate = useNavigate()
 
     const [justId, setJustId] = useState([])
@@ -20,9 +25,16 @@ const UsersProvider = ({children}) => {
 
     useEffect(() => {
       const getUsersId = async()=> {
-        const {data} = await clienteAxios.get('/users/justId')
-        setJustId(data)
-        setCambioStado(false)
+        try {
+            if(cambioStado){
+                const {data} = await clienteAxios.get('/users/justId')
+                setJustId(data)
+            }
+        } catch (error) {
+            console.log(error)
+        }finally{
+            setCambioStado(false)
+        }
       }
       getUsersId()
     }, [cambioStado ?? true])
@@ -145,7 +157,20 @@ const UsersProvider = ({children}) => {
 
 
 
-   
+    const cambiarPasswordUser = async(password) => {
+        try {
+            const enviar = {
+                id : auth.id, 
+                password: password
+            }
+            const {data} = await clienteAxios.post('/users/cambiarPasswordUser', enviar)
+            localStorage.setItem("token", "")
+            navigate("/login")
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     
     
 
@@ -166,7 +191,10 @@ const UsersProvider = ({children}) => {
                 cargando,
                 setJustId,
                 setCambioStado,
-                cambioStado
+                cambioStado,
+                setModalPerfil,
+                modalPerfil,
+                cambiarPasswordUser
             }}
         >
             {children}

@@ -1,0 +1,520 @@
+{
+    "frases": [
+        {
+            "id":1,
+            "frase": "La más estricta justicia no creo que sea siempre la mejor política",
+            "autor": "Abraham Lincoln"
+        },
+        {
+            "id":2,
+            "frase": "El mundo no está en peligro por las malas personas sino por aquellas que permiten la maldad",
+            "autor": "Einstein, Albert"
+        },
+        {
+            "id":3,
+            "frase": "Ningún hombre es lo bastante bueno para gobernar a otros sin su consentimiento",
+            "autor": "Abraham Lincoln"
+        },
+        {
+            "id":4,
+            "frase": "Las guerras seguirán mientras el color de la piel siga siendo más importante que el de los ojos",
+            "autor": "Marley, Bob"
+        },
+        {
+            "id":5,
+            "frase": "Si falta la diplomacia, recurrid a la mujer",
+            "autor": "Goldoni, Carlo"
+        },
+        {
+            "id":6,
+            "frase": "Cada día sabemos más y entendemos menos",
+            "autor": "Einstein, Albert"
+        },
+        {
+            "id":7,
+            "frase": "Cuando un hombre se sienta con una chica bonita durante una hora, parece que fuese un minuto. Pero déjalo que se siente en una estufa caliente durante un minuto y le parecerá más de una hora. Eso es relatividad",
+            "autor": "Einstein, Albert"
+        },
+        {
+            "id":8,
+            "frase": "El sabio no dice nunca todo lo que piensa, pero siempre piensa todo lo que dice",
+            "autor": "Aristóteles"
+        },
+        {
+            "id":9,
+            "frase": "Si los hombres han nacido con dos ojos, dos orejas y una sola lengua es porque se debe escuchar y mirar dos veces antes de hablar",
+            "autor": "Madame de Sevigné"
+        },
+        {
+            "id":10,
+            "frase": "La mayor declaración de amor es la que no se hace; el hombre que siente mucho, habla poco",
+            "autor": "Platón"
+        },
+        {
+            "id":11,
+            "frase": "La esperanza es un estimulante vital muy superior a la suerte",
+            "autor": "Nietzsche, Friedrich W"
+        },
+        {
+            "id":12,
+            "frase": "La medida del amor es amar sin medida",
+            "autor": "San Agustín"
+        },
+        {
+            "id":13,
+            "frase": "Si das pescado a un hombre hambriento lo nutres durante una jornada. Si le enseñas a pescar, le nutrirás toda su vida",
+            "autor": "Lao Tsé"
+        },
+        {
+            "id":14,
+            "frase": "No hay nada que un hombre no sea capaz de hacer cuando una mujer le mira",
+            "autor": "Casanova, Alejandro"
+        },
+        {
+            "id":15,
+            "frase": "Si es bueno vivir, todavía es mejor soñar, y lo mejor de todo, despertar",
+            "autor": "Antonio Machado"
+        },
+        {
+            "id":16,
+            "frase": "Vivir sola es como estar en una fiesta donde nadie te hace caso",
+            "autor": "Marilyn Monroe"
+        },
+        {
+            "id":17,
+            "frase": "El cuerpo humano es el carruaje; el yo, el hombre que lo conduce; el pensamiento son las riendas, y los sentimientos, los caballos",
+            "autor": "Platón"
+        },
+        {
+            "id":18,
+            "frase": "Estar preparado es importante, saber esperarlo es aún más, pero aprovechar el momento adecuado es la clave de la vida",
+            "autor": "Arthur Schnitzler"
+        },
+        {
+            "id":19,
+            "frase": "Pienso, luego existo",
+            "autor": "Descartes, René"
+        },
+        {
+            "id":20,
+            "frase": "No abras los labios si no estás seguro de que lo que vas a decir es más hermoso que el silencio",
+            "autor": "Proverbio árabe"
+        },
+        {
+            "id":21,
+            "frase": "Un hermano puede no ser un amigo, pero un amigo será siempre un hermano",
+            "autor": "Benjamin Franklin"
+        },
+        {
+            "id":22,
+            "frase": "Todo lo que se come sin necesidad se roba al estómago de los pobres",
+            "autor": "Mahatma Gandhi"
+        },
+        {
+            "id":23,
+            "frase": "Hay dos cosas que son infinitas: el universo y la estupidez humana; de la primera no estoy muy seguro",
+            "autor": "Einstein, Albert"
+        },
+        {
+            "id":24,
+            "frase": "Lo que importa verdaderamente en la vida no son los objetivos que nos marcamos, sino los caminos que seguimos para lograrlo",
+            "autor": "Peter Bamm"
+        },
+        {
+            "id":25,
+            "frase": "Se necesita poco para hacer las cosas bien, pero menos aún para hacerlas mal",
+            "autor": "Paul Bocuse"
+        },
+        {
+            "id":26,
+            "frase": "Con veinte años todos tienen el rostro que Dios les ha dado; con cuarenta el rostro que les ha dado la vida y con sesenta el que se merecen",
+            "autor": "Albert Schweitzer"
+        },
+        {
+            "id":27,
+            "frase": "Hay algo que Dios ha hecho mal",
+            "autor": "Adenauer, Konrad"
+        },
+        {
+            "id":28,
+            "frase": "El nacionalismo es una enfermedad infantil. Es el sarampión de la humanidad",
+            "autor": "Einstein, Albert"
+        },
+        {
+            "id":29,
+            "frase": "No hay que ir para atrás ni para darse impulso",
+            "autor": "Lao Tsé"
+        },
+        {
+            "id":30,
+            "frase": "Aprende a vivir y sabrás morir bien",
+            "autor": "Confucio"
+        },
+        {
+            "id":31,
+            "frase": "No hay camino para la verdad, la verdad es el camino",
+            "autor": "Mahatma Gandhi"
+        },
+        {
+            "id":32,
+            "frase": "El nacimiento y la muerte no son dos estados distintos, sino dos aspectos del mismo estado",
+            "autor": "Mahatma Gandhi"
+        },
+        {
+            "id":33,
+            "frase": "La vida no es sino una continua sucesión de oportunidades para sobrevivir",
+            "autor": "Gabriel García Márquez"
+        },
+        {
+            "id":34,
+            "frase": "El amor es Física, el matrimonio Química",
+            "autor": "Alejandro Dumas"
+        },
+        {
+            "id":35,
+            "frase": "Ojo por ojo, y el mundo acabará ciego",
+            "autor": "Mahatma Gandhi"
+        },
+        {
+            "id":36,
+            "frase": "Una velada en que todos los presentes estén absolutamente de acuerdo es una velada perdida",
+            "autor": "Einstein, Albert"
+        },
+        {
+            "id":37,
+            "frase": "Si abordas una situación como asunto de vida o muerte, morirás muchas veces",
+            "autor": "Adam Smith"
+        },
+        {
+            "id":38,
+            "frase": "Queremos ser más felices que los demás, y eso es dificilísimo, porque siempre les imaginamos mucho más felices de lo que son en realidad",
+            "autor": "Montesquieu"
+        },
+        {
+            "id":39,
+            "frase": "Me opongo a las relaciones sexuales antes de la boda, por el peligro de llegar tarde a la ceremonia",
+            "autor": "Ricci, Antonio"
+        },
+        {
+            "id":40,
+            "frase": "Dar el ejemplo no es la principal manera de influir sobre los demás; es la única manera",
+            "autor": "Einstein, Albert"
+        },
+        {
+            "id":41,
+            "frase": "No hagas a los otros lo que no te gustaría que te hicieran a ti",
+            "autor": "Confucio"
+        },
+        {
+            "id":42,
+            "frase": "Quien no amó nunca, no ha vivido jamás",
+            "autor": "Gay, John"
+        },
+        {
+            "id":43,
+            "frase": "El amor no tiene cura, pero es la única medicina para todos los males",
+            "autor": "Leonard Cohen"
+        },
+        {
+            "id":44,
+            "frase": "Cuando soy buena, soy buena; cuando soy mala, soy mucho mejor",
+            "autor": "West, Mae"
+        },
+        {
+            "id":45,
+            "frase": "Hay que tener cuidado al elegir a los enemigos porque uno termina pareciéndose a ellos",
+            "autor": "Borges, Jorge Luis"
+        },
+        {
+            "id":46,
+            "frase": "Quien no haya sufrido lo que yo, que no me de consejos",
+            "autor": "Sófocles"
+        },
+        {
+            "id":47,
+            "frase": "El que vive no debe luchar con los muertos",
+            "autor": "Torquato Tasso"
+        },
+        {
+            "id":48,
+            "frase": "Pensar es el trabajo más difícil que existe. Quizá sea ésta la razón por la que haya pocas personas que lo practiquen",
+            "autor": "Henry Ford"
+        },
+        {
+            "id":49,
+            "frase": "Las personas más insoportables son los hombres que se creen geniales y las mujeres que se creen irresistibles",
+            "autor": "Asselin, Henry"
+        },
+        {
+            "id":50,
+            "frase": "Sólo puede ser feliz siempre el que sepa ser feliz con todo",
+            "autor": "Confucio"
+        },
+        {
+            "id":51,
+            "frase": "Algunas personas son tan falsas que ya no distinguen que lo que piensan es justamente lo contrario de lo que dicen",
+            "autor": "Marcel Ayme"
+        },
+        {
+            "id":52,
+            "frase": "Nuestra amistad no depende de cosas como el espacio y el tiempo",
+            "autor": "Bach, Richard"
+        },
+        {
+            "id":53,
+            "frase": "Lo peor que hacen los malos es obligarnos a dudar de los buenos",
+            "autor": "Benavente, Jacinto"
+        },
+        {
+            "id":54,
+            "frase": "No hay caminos para la paz; la paz es el camino",
+            "autor": "Mahatma Gandhi"
+        },
+        {
+            "id":55,
+            "frase": "La timidez es una condición ajena al corazón, una categoría, una dimensión que desemboca en la soledad",
+            "autor": "Pablo Neruda"
+        },
+        {
+            "id":56,
+            "frase": "El hombre que se levanta es aún más grande que el que no ha caído",
+            "autor": "Arenal, Concepción"
+        },
+        {
+            "id":57,
+            "frase": "Vale más actuar exponiéndose a arrepentirse de ello, que arrepentirse de no haber hecho nada",
+            "autor": "Boccaccio, Giovani"
+        },
+        {
+            "id":58,
+            "frase": "El pesimista se queja del viento; el optimista espera que cambie; el realista ajusta las velas",
+            "autor": "William George Ward"
+        },
+        {
+            "id":59,
+            "frase": "De aquel que opina que el dinero puede hacerlo todo, cabe sospechar con fundamento que será capaz de hacer cualquier cosa por dinero",
+            "autor": "Benjamin Franklin"
+        },
+        {
+            "id":60,
+            "frase": "El mejor placer en la vida es hacer lo que la gente te dice que no puedes hacer",
+            "autor": "Walter Bagehot"
+        },
+        {
+            "id":61,
+            "frase": "La verdad siempre sale a flote como la gota de aceite en el vaso de agua",
+            "autor": "Lola Flores"
+        },
+        {
+            "id":62,
+            "frase": "Hay gente tan sumamente pobre que solamente tiene dinero",
+            "autor": "Anonimo"
+        },
+        {
+            "id":63,
+            "frase": "El amigo ha de ser como el dinero, que antes de necesitarle, se sabe el valor que tiene",
+            "autor": "Sócrates"
+        },
+        {
+            "id":64,
+            "frase": "Todos vivímos bajo el mismo cielo, pero ninguno tiene el mismo horizonte",
+            "autor": "Adenauer, Konrad"
+        },
+        {
+            "id":65,
+            "frase": "Tu amigo tiene un amigo, y el amigo de tu amigo tiene otro amigo; por consiguiente, sé discreto",
+            "autor": "Talmud"
+        },
+        {
+            "id":66,
+            "frase": "La probeza no viene por la disminución de las riquezas, sino por la multiplicación de los deseos",
+            "autor": "Platón"
+        },
+        {
+            "id":67,
+            "frase": "En tu lucha contra el resto de mundo, te aconsejo que te pongas del lado del resto del mundo",
+            "autor": "Franz Kafka"
+        },
+        {
+            "id":68,
+            "frase": "Un amigo fiel es un alma en dos cuerpos",
+            "autor": "Aristóteles"
+        },
+        {
+            "id":69,
+            "frase": "La mentira hace un viaje en torno al globo mientras la verdad se pone las botas",
+            "autor": "Spurgeon, Charles H"
+        },
+        {
+            "id":70,
+            "frase": "Todos encontraría su propia vida mucho más interesante, si dejaran de compararla con la vida de los demás",
+            "autor": "Henry Fonda"
+        },
+        {
+            "id":71,
+            "frase": "La pereza viaja tan despacio que la pobreza no tarda en alcanzarla",
+            "autor": "Benjamin Franklin"
+        },
+        {
+            "id":72,
+            "frase": "El éxito es fácil de obtener. Lo difícil es merecerlo",
+            "autor": "Albert Camus"
+        },
+        {
+            "id":73,
+            "frase": "La persona que no comete nunca una tontería nunca hará nada interesante",
+            "autor": "Proverbio inglés"
+        },
+        {
+            "id":74,
+            "frase": "Lo mejor que podemos hacer en favor de quienes nos aman es seguir siendo felices",
+            "autor": "Alain"
+        },
+        {
+            "id":75,
+            "frase": "La mayor declaración de amor es la que no se hace; el hombre que siente mucho, habla poco",
+            "autor": "Platón"
+        },
+        {
+            "id":76,
+            "frase": "Vieja madera para arder, viejo vino para para beber, viejos amigos en quien confiar, y viejos autores para leer",
+            "autor": "Bacon, Francis"
+        },
+        {
+            "id":77,
+            "frase": "Me gustan más los sueños del futuro que la historia del pasado",
+            "autor": "Thomas Jefferson"
+        },
+        {
+            "id":78,
+            "frase": "Todos obedecen con gusto cuando el que manda es justo",
+            "autor": "Proverbio castellano"
+        },
+        {
+            "id":79,
+            "frase": "¿Quieres ser rico? Pues no te afanes es aumentar tus bienes, sino en disminuir tu codicia",
+            "autor": "Epicuro"
+        },
+        {
+            "id":80,
+            "frase": "Tómate tiempo en escoger un amigo, pero sé más lento aún en cambiarlo",
+            "autor": "Benjamin Franklin"
+        },
+        {
+            "id":81,
+            "frase": "Vale más actuar exponiéndose a arrepentirse de ello, que arrepentirse de no haber hecho nada",
+            "autor": "Boccaccio, Giovani"
+        },
+        {
+            "id":82,
+            "frase": "Todo está perdido cuando los malos sirven de ejemplo y los buenos de mofa",
+            "autor": "Democrates"
+        },
+        {
+            "id":83,
+            "frase": "Se puede comprender la vida hacia atrás; vivirla siempre hacia delante",
+            "autor": "Sören Kierkegaard"
+        },
+        {
+            "id":84,
+            "frase": "Las personas son como la Luna. Siempre tienen un lado oscuro que no enseñan a nadie",
+            "autor": "Marx Twain"
+        },
+        {
+            "id":85,
+            "frase": "El sabio no dice lo que sabe, y el necio no sabe lo que dice",
+            "autor": "Proverbio Chino"
+        },
+        {
+            "id":86,
+            "frase": "Yo declaro que la justicia no es otra cosa que la conveniencia del más fuerte",
+            "autor": "Platón"
+        },
+        {
+            "id":87,
+            "frase": "El hombre que tiene miedo sin peligro inventa el peligro para justificar su miedo",
+            "autor": "Alain Emilie Chartier"
+        },
+        {
+            "id":88,
+            "frase": "Muchas personas se pierden las pequeñas alegrías mientras aguardan la gran felicidad",
+            "autor": "Buck, Pearl"
+        },
+        {
+            "id":89,
+            "frase": "La riqueza es como el agua salada; cuanto más se bebe, más sed da",
+            "autor": "Arthur Schopenhauer"
+        },
+        {
+            "id":90,
+            "frase": "Mejor es morir de una vez que vivir temiendo la vida",
+            "autor": "Esopo"
+        },
+        {
+            "id":91,
+            "frase": "Las conversaciones son siempre peligrosas si se tiene algo que ocultar",
+            "autor": "Christie, Agatha"
+        },
+        {
+            "id":92,
+            "frase": "Cumplamos la tarea de vivir de tal modo que cuando muramos, incluso el de la funeraria lo sienta",
+            "autor": "Twain, Mark"
+        },
+        {
+            "id":93,
+            "frase": "Produce una inmensa tristeza pensar que la naturaleza habla mientras el género humano no escucha",
+            "autor": "Victor Hugo"
+        },
+        {
+            "id":94,
+            "frase": "Dicen que el hombre no es hombre mientras no oye su nombre de labios de una mujer",
+            "autor": "Machado, Antonio"
+        },
+        {
+            "id":95,
+            "frase": "El hombre que más ha vivido no es aquél que más años ha cumplido, sino aquel que más ha experimentado la vida",
+            "autor": "Rousseau, Jean Jacques"
+        },
+        {
+            "id":96,
+            "frase": "Sólo se ama lo que no se posee totalmente",
+            "autor": "Proust, Marcel"
+        },
+        {
+            "id":97,
+            "frase": "El recuerdo es el único paraíso del cual no podemos ser expulsados",
+            "autor": "Richter, Johan Paul Fr"
+        },
+        {
+            "id":98,
+            "frase": "El saber y la razón hablan, la ignorancia y el error gritan",
+            "autor": "Graf, Arthur"
+        },
+        {
+            "id":99,
+            "frase": "El amor no tiene cura, pero es la única medicina para todos los males",
+            "autor": "Cohen, Leonard"
+        },
+        {
+            "id":100,
+            "frase": "Cada persona forja su propia grandeza. Los enanos permanecerán enanos aunque se suban a los Alpes",
+            "autor": "August von Kotzebue"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

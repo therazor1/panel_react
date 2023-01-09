@@ -6,10 +6,9 @@ import useTask from '../hooks/useTask'
 import ComponenteSelect from './ComponenteSelect'
 
 const Task = ({tarea}) => {
-
     const {condiciones} = useTask()
     const {editarPening} = usePanel()
-    const {hora, tarea:nombre, estado, creador, cliente, _id} = tarea
+    const {hora, tarea:nombre, estado, creador, cliente, _id, fecha} = tarea
     const [urlImg, setUrlImg] = useState("")
     useEffect(() => {
         setUrlImg(obtenerImagen(cliente.imagen))
@@ -25,7 +24,7 @@ const Task = ({tarea}) => {
 
     return (
         <li data-user="9" className="task tarea1 en-c1rso">
-            <div className="fecha"><p>13/09/2022</p></div>
+            <div className="fecha"><p>{fecha}</p></div>
             <div className="solicitante"><img title={`Solicitado por ${creador.nombre.split(" ")[0]}`} src="../src/img/perfil.jpg" className="customer solicitante" /></div>
             <div className="cliente"><img title={`${cliente.nombre}`} src={urlImg} className="customer cliente" /></div>
             <div className="tarea"><p>{nombre}</p></div>

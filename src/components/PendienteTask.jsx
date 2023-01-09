@@ -4,8 +4,8 @@ import clienteAxios from '../config/clienteAxios'
 import { obtenerImagen } from '../helpers/ObtenerImagen'
 import useTask from '../hooks/useTask'
 import useUsers from '../hooks/useUsers'
-const PendienteTask = ({pendiente}) => {
 
+const PendienteTask = ({pendiente}) => {
     const {setCambioStado, cambioStado} = useUsers()
     const {setEditPendiente, setModal} = useTask()
     const [getPendiente, setgetPendiente] = useState({})
@@ -24,12 +24,13 @@ const PendienteTask = ({pendiente}) => {
     const [nombreEstado, setNombreEstado] = useState("")
     const [prioridad, setPrioridad] = useState(false)
     const [id, setId] = useState("")
+
+
     useEffect(()=>{
         setCargando(true)
         const obtenerPendiente = async () => {
             try {
                 const {data} = await clienteAxios.post(`/pendientes/${pendiente}`)
-                // console.log(data)
                 setIdCreador(data.creador._id)
                 setNombreCreador(data.creador.nombre)
                 setCreadorColor(data.creador.color)
@@ -68,6 +69,7 @@ const PendienteTask = ({pendiente}) => {
         setEditPendiente(edit)
     }
 
+    
     return (
         <>
         {
