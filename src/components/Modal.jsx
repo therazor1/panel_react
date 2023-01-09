@@ -40,7 +40,8 @@ const Modal = () => {
         setNacionalidad(editClient.nacionalidad)
         setImagen({
             // preview: `http://localhost:8080/api/clients/imagen/${arrImg.name}/${arrImg.extension}`
-            preview: `https://luminous-dasik-2c2cf1.netlify.app/api/clients/imagen/${arrImg.name}/${arrImg.extension}`
+            preview: `https://panel-backend-zeta.vercel.app/
+            /api/clients/imagen/${arrImg.name}/${arrImg.extension}`
         })
         setId(editClient._id)
       }
