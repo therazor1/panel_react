@@ -7,7 +7,10 @@ import { sumHours } from '../helpers/sumarHoras'
 
 import io from "socket.io-client"
 import Frase from '../components/Frase';
-const socket = io('http://localhost:8080')
+// const socket = io('http://localhost:8080')
+const socket = io('https://luminous-dasik-2c2cf1.netlify.app/')
+
+
 
 
 const Panel = () => {

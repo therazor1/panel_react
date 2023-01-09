@@ -6,7 +6,8 @@ import clienteAxios from "../config/clienteAxios";
 import useUsers from "../hooks/useUsers";
 import io from "socket.io-client"
 import useAuth from "../hooks/useAuth";
-const socket = io('http://localhost:8080')
+// const socket = io('http://localhost:8080')
+const socket = io('https://luminous-dasik-2c2cf1.netlify.app/')
 const TaskContext = createContext()
 
 const TaskProvider = ({children}) => {
